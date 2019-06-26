@@ -21,9 +21,9 @@ namespace ConsoleApp1
         {
             try
             {
-                var basicCredential = new NetworkCredential("M3Output@Patties.com.au", "");
+                var basicCredential = new NetworkCredential("", "");
 
-                string from = "M3Output@Patties.com.au";
+                string from = "";
 
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(from);
@@ -38,8 +38,8 @@ namespace ConsoleApp1
                 //Attachment attachment = new System.Net.Mail.Attachment(attachmentPath);
                 //mail.Attachments.Add(attachment);
 
-                SmtpClient smtpClient = new SmtpClient("smtp.office365.com");
-                smtpClient.Port = Convert.ToInt16("567");
+                SmtpClient smtpClient = new SmtpClient("");
+                smtpClient.Port = Convert.ToInt16("");
                 //smtpClient.UseDefaultCredentials = false;
                 //smtpClient.Credentials = basicCredential;
                 smtpClient.Credentials = CredentialCache.DefaultNetworkCredentials;
@@ -55,11 +55,11 @@ namespace ConsoleApp1
         {
             try
             {
-                SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+                SmtpClient client = new SmtpClient("", 1);
                 client.EnableSsl = true;
-                client.Credentials = new System.Net.NetworkCredential("M3Output@Patties.com.au", "");
-                MailAddress from = new MailAddress("M3Output@Patties.com.au", String.Empty, System.Text.Encoding.UTF8);
-                MailAddress to = new MailAddress("MohamedAk@fortude.co");
+                client.Credentials = new System.Net.NetworkCredential("", "");
+                MailAddress from = new MailAddress("", String.Empty, System.Text.Encoding.UTF8);
+                MailAddress to = new MailAddress("");
                 MailMessage message = new MailMessage(from, to);
                 message.Body = "This is your body message";
                 message.BodyEncoding = System.Text.Encoding.UTF8;

@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string[] toAddress = new string[] { "PHettiarachchi@patties.com.au" };
+            string[] toAddress = new string[] { "" };
             try
             {
                 //Notifications.SendEmail(toAddress, "GL Test", "GL Test");
